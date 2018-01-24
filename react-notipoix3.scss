@@ -1,0 +1,101 @@
+.react-notipoix3-ul{
+    position: fixed;
+    z-index:99999;
+    list-style:none;
+    margin: 0;
+    padding:0 20px;
+    // display: flex;
+    display:block;
+    width:100%;
+    max-width:320px;
+    // max-height:100%;
+    overflow-x: hidden;
+    // overflow-y: auto;
+
+    .react-notipoix3-li{
+        width:100%;
+        max-width: 320px;
+        overflow: hidden;
+        position: relative;
+        background:#fff;
+        margin:0;
+        padding:0;
+        border-radius: 4px;
+        box-shadow: 0 2px 15px rgba(#000,0.15);
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        p{
+            font-size:10pt;
+            margin:0;
+            padding:15px;
+            display: flex;
+            word-break: break-all;
+            align-items: center;
+        }
+    }
+    .react-notipoix3-li.bottom-left {
+        // &:first-child{
+        //     margin-top: 0;
+        // }
+        margin:20px 0;
+    }
+    .react-notipoix3-li.bottom-right {
+        // &:first-child{
+        //     margin-top: 0;
+        // }
+        margin:20px 0;
+    }
+    .react-notipoix3-li.top-left {
+        // &:first-child{
+        //     margin-top: 40px;
+        // }
+        margin:20px 0;
+    }
+    .react-notipoix3-li.top-right {
+        // &:first-child{
+        //     margin-top: 40px;
+        // }
+        margin:20px 0;
+    }
+    .react-notipoix3-li.dark{
+        color:#fff;
+        background:$basecolor-black;
+    }
+    .react-notipoix3-li.default{
+    }
+    .react-notipoix3-li.blue{
+        border-left: 10px solid #0d86ff;
+    }
+    .react-notipoix3-li.success{
+        border-left: 10px solid $basecolor-success;
+    }
+}
+
+.react-notipoix3-button{
+    -webkit-transition: all 500ms cubic-bezier(0.475, 0.025, 0.395, 1);
+    -webkit-transition: all 500ms cubic-bezier(0.475, 0.025, 0.395, 1.505);
+    -moz-transition: all 500ms cubic-bezier(0.475, 0.025, 0.395, 1.505);
+    -o-transition: all 500ms cubic-bezier(0.475, 0.025, 0.395, 1.505);
+    transition: all 500ms cubic-bezier(0.475, 0.025, 0.395, 1.505);
+    padding:15px 15px;
+    cursor: pointer;
+    outline:0;
+    border:0;
+    background:rgba(#f5f6f9,0.20);
+    border-left:1px solid rgba(#000,0.05);
+    color:$basecolor-black;
+    line-height:0;
+    &:hover{
+        color:rgba($basecolor-black,0.25);
+        // opacity:0.5;
+        outline:0;
+    }
+    &:active{
+        outline:0;
+    }
+    &:focus{
+        outline:0;
+    }
+}

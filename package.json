@@ -1,0 +1,38 @@
+{
+  "name": "react-notipoix3",
+  "version": "1.0.0",
+  "description": "react-notification component. poi poi poi~",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabigraphics/react-notipoix3.git"
+  },
+  "keywords": [
+    "react",
+    "notification",
+    "anime"
+  ],
+  "author": {
+    "name": "Nabigraphics",
+    "email": "hbh2692@naver.com",
+    "url": "https://github.com/nabigraphics"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nabigraphics/react-notipoix3/issues"
+  },
+  "homepage": "https://github.com/nabigraphics/react-notipoix3#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-motion": "^0.5.2",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.2"
+  }
+}
