@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { createStore } from 'redux';
-import { devToolsEnhancer } from 'redux-devtools-extension';
 import { Provider, connect } from 'react-redux';
 import reducers from './reducers';
 import * as actions from './actions';
@@ -25,7 +24,7 @@ function removeall_notify(){
         store.dispatch(actions.notify_remove_all());        
     }
 }
-const store = createStore(reducers,devToolsEnhancer());
+const store = createStore(reducers);
 
 class Notipoix3 extends Component {
     render() {
