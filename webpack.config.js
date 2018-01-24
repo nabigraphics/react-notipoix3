@@ -12,7 +12,9 @@ const WebpackConfig = {
     },
     output: {
         path: __dirname + '/lib/',
-        filename: '[name].js'
+        filename: '[name].js',
+        libraryTarget: 'umd',
+        library:['Notipoix3','notipoi']
     },
     module: {
         loaders: [
@@ -20,9 +22,6 @@ const WebpackConfig = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                options: {
-                    presets: ['env', 'react']
-                }
             },
             {
                 test: /\.scss$/,
