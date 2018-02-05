@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import * as actions from './actions';
 import { TransitionMotion, spring } from 'react-motion';
 import style from './style';
 
-class Notification extends Component {
+class Notification extends React.Component {
     constructor(props){
         super(props);
         this.willEnter = this.willEnter.bind(this);

@@ -1,19 +1,19 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const extractSass = new ExtractTextPlugin({
-  filename:'../css/[name].css',
+  filename:'./css/[name].css',
   allChunks:true
 });
 
 const WebpackConfig = {
     entry: {
-        index:'./src/index.js',
+        dev:'./src/dev.js',
+        style:'./lib/react-notipoix3.scss'
     },
     output: {
-        path: __dirname + '/lib/',
+        path: __dirname + '/dist',
         filename: '[name].js',
         libraryTarget: 'umd',
         library:['Notipoix3','notipoi']
@@ -27,9 +27,6 @@ const WebpackConfig = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                options:{
-                    presets: [["env", { modules: false }], "react"],
-                }
             },
             {
                 test: /\.scss$/,
@@ -38,28 +35,8 @@ const WebpackConfig = {
         ]
     },
     plugins:[
-        new BundleAnalyzerPlugin()
+        extractSass
     ]
 };
-
-// webpack production config.
-if (process.env.NODE_ENV === 'production') {
-
-    WebpackConfig.externals = {
-        'react': 'react',
-        'react-dom': 'react-dom',
-        'immutable': 'immutable',
-        'redux': 'redux',
-        'react-redux': 'react-redux',
-        'react-motion':'react-motion'
-    };
-
-    WebpackConfig.plugins = [
-        extractSass,
-        new webpack.optimize.AggressiveMergingPlugin(),
-        new webpack.optimize.UglifyJsPlugin(),
-    ];
-
-}
 
 module.exports = WebpackConfig;

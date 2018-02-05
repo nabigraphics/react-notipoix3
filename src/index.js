@@ -1,5 +1,5 @@
 'use strict';
-import React, { Component } from 'react';
+import React from 'react';
 import { createStore } from 'redux';
 import { Provider, connect } from 'react-redux';
 import reducers from './reducers';
@@ -27,7 +27,7 @@ function removeall_notify(){
 }
 const store = createStore(reducers);
 
-class Notipoix3 extends Component {
+class Notipoix3 extends React.Component {
     render() {
         return (
             <Provider store={store}>

@@ -1,10 +1,11 @@
 {
   "name": "react-notipoix3",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "react-notification component. poi poi poi~",
   "main": "lib/index.js",
   "scripts": {
     "watch": "cross-env NODE_ENV=development webpack -w",
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
     "build:dev": "cross-env NODE_ENV=development webpack",
     "build:production": "cross-env NODE_ENV=production webpack -p"
   },
@@ -35,10 +36,10 @@
     "react-dom": "^16.2.0"
   },
   "dependencies": {
+    "immutable": "^3.8.2",
     "react-motion": "^0.5.2",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "immutable": "^3.8.2"  
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -63,6 +64,8 @@
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^6.0.6",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.10.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
