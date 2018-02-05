@@ -1,6 +1,6 @@
 {
   "name": "react-notipoix3",
-  "version": "1.0.221",
+  "version": "1.0.222",
   "description": "react-notification component. poi poi poi~",
   "main": "lib/index.js",
   "scripts": {
