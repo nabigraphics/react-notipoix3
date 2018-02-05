@@ -4,21 +4,21 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const extractSass = new ExtractTextPlugin({
-  filename:'../css/[name].css',
-  allChunks:true
+    filename: '../css/[name].css',
+    allChunks: true
 });
 
 const WebpackConfig = {
     entry: {
-        index:'./src/index.js',
+        index: './src/index.js',
     },
     output: {
         path: __dirname + '/lib/',
         filename: '[name].js',
         libraryTarget: 'umd',
-        library:['Notipoix3','notipoi']
+        library: ['Notipoix3', 'notipoi']
     },
-    devServer:{
+    devServer: {
         contentBase: __dirname + '/dist',
     },
     module: {
@@ -27,8 +27,8 @@ const WebpackConfig = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                options:{
-                    presets: [["env", { modules: false }], "react"],
+                options: {
+                    presets: ["env", "react"],
                 }
             },
             {
@@ -37,9 +37,6 @@ const WebpackConfig = {
             },
         ]
     },
-    plugins:[
-        new BundleAnalyzerPlugin()
-    ]
 };
 
 // webpack production config.
@@ -51,7 +48,7 @@ if (process.env.NODE_ENV === 'production') {
         'immutable': 'immutable',
         'redux': 'redux',
         'react-redux': 'react-redux',
-        'react-motion':'react-motion'
+        'react-motion': 'react-motion'
     };
 
     WebpackConfig.plugins = [
